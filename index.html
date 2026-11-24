@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DAPUR HEBOH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>DAPUR HEBOH</h1>
+      <div class="stats">
+        <div>Skor<b id="score">0</b></div>
+        <div>Waktu<b id="time">5:00</b></div>
+        <div>Kombo<b id="combo">x1</b></div>
+      </div>
+    </header>
+
+    <div class="rail" id="rail"></div>
+
+    <div class="stage">
+      <canvas id="game" width="960" height="520" tabindex="0"></canvas>
+      <nav class="touch-controls" aria-label="Kontrol game">
+        <div class="dpad" aria-label="Gerak">
+          <button type="button" data-key="ArrowUp" aria-label="Atas">▲</button>
+          <button type="button" data-key="ArrowLeft" aria-label="Kiri">◀</button>
+          <button type="button" data-key="ArrowDown" aria-label="Bawah">▼</button>
+          <button type="button" data-key="ArrowRight" aria-label="Kanan">▶</button>
+        </div>
+        <div class="action-pad">
+          <button type="button" data-action="interact">Ambil / taruh</button>
+          <button type="button" data-key="Space">Tahan: potong / padamkan</button>
+        </div>
+      </nav>
+      <div id="toast"></div>
+      <section class="overlay" id="overlay">
+        <div class="card">
+          <h2 id="ovTitle">Warung lagi penuh!</h2>
+          <p id="ovText">Pelanggan datang bertubi-tubi. Ambil bahan, potong, masak, taruh di piring, lalu antar sebelum mereka kabur. Jangan sampai gosong, nanti kompornya kebakar.</p>
+          <div class="book" id="book"></div>
+          <p class="keys"><b>WASD</b> / panah: jalan &nbsp; <b>E</b>: ambil / taruh &nbsp; <b>Spasi</b> (tahan): potong / padamkan api</p>
+          <button id="startBtn">Buka warung</button>
+        </div>
+      </section>
+    </div>
+    <p class="controls-hint"><b>HP</b>: gunakan tombol di bawah permainan · <b>WASD / panah</b>: gerak · <b>E</b>: ambil/taruh · <b>Spasi</b>: potong/padamkan api · Rak piring: taruh/ambil piring · Maksimal bawa 5 bahan</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
